@@ -42,11 +42,22 @@ function oneRound(playerChoice, computerChoice) {
     }
 }
 
-function game(){
-    for(let i = 0; i < 5; i++){
-        result = oneRound(prompt("Rock, paper, or scissors?"), getComputerChoice());
-        console.log(result);    
-    }
-}
+const buttonRock = document.createElement('button')
+const buttonPaper = document.createElement('button')
+const buttonScissors = document.createElement('button')
 
-console.log(game());
+buttonRock.addEventListener('click', () => {
+    oneRound('rock', getComputerChoice());
+})
+
+buttonPaper.addEventListener('click', () => {
+    oneRound('paper', getComputerChoice());
+})
+
+buttonScissors.addEventListener('click', () => {
+    oneRound('scissors', getComputerChoice());
+})
+
+document.body.appendChild(buttonRock)
+document.body.appendChild(buttonPaper)
+document.body.appendChild(buttonScissors)
