@@ -1,5 +1,4 @@
-function getComputerChoice(){
-    
+function getComputerChoice(){    
     let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
         case 0:
@@ -42,20 +41,24 @@ function oneRound(playerChoice, computerChoice) {
     }
 }
 
+
 const buttonRock = document.createElement('button')
 const buttonPaper = document.createElement('button')
 const buttonScissors = document.createElement('button')
+buttonRock.textContent = 'Rock'
+buttonPaper.textContent = 'Paper'
+buttonScissors.textContent = 'Scissors'
 
 buttonRock.addEventListener('click', () => {
-    oneRound('rock', getComputerChoice());
+    alert(oneRound('rock', getComputerChoice()));
 })
 
 buttonPaper.addEventListener('click', () => {
-    oneRound('paper', getComputerChoice());
+    alert(oneRound('paper', getComputerChoice()));
 })
 
 buttonScissors.addEventListener('click', () => {
-    oneRound('scissors', getComputerChoice());
+    alert(oneRound('scissors', getComputerChoice()));
 })
 
 document.body.appendChild(buttonRock)
